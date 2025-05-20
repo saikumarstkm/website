@@ -11,48 +11,59 @@
       50% { transform: scale(1.2); }
       100% { transform: scale(1); }
     }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
     .heart {
       animation: heartbeat 1.5s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    .fade-in-delay-1 { animation-delay: 0.2s; }
+    .fade-in-delay-2 { animation-delay: 0.4s; }
+    .fade-in-delay-3 { animation-delay: 0.6s; }
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+    body {
+      background-image: linear-gradient(rgba(255, 245, 247, 0.9), rgba(255, 245, 247, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="rgba(255, 182, 193, 0.3)"/></svg>');
+      background-size: 50px;
     }
   </style>
 </head>
 <body class="bg-pink-50 text-gray-800 font-sans">
-  <header class="bg-rose-600 text-white text-center py-10">
-    <h1 class="text-4xl md:text-5xl font-bold font-serif">Happy 3rd Anniversary, Hema!</h1>
-    <p class="mt-2 text-lg">[May 25, 2025]</p>
+  <header class="bg-rose-600 text-white text-center py-10 fade-in">
+    <h1 class="text-4xl md:text-5xl font-bold font-serif">🌸 Happy 3rd Anniversary, Hema! 🌸</h1>
+    <p class="mt-2 text-lg fade-in fade-in-delay-1">May 25, 2025</p>
   </header>
 
   <main class="max-w-4xl mx-auto py-12 px-4">
-    <section class="text-center">
-      <h2 class="text-3xl font-semibold mb-6 font-serif">To My Dearest Love</h2>
+    <section class="text-center fade-in fade-in-delay-2">
+      <h2 class="text-3xl font-semibold mb-6 font-serif">🌷 To My Dearest Love 🌷</h2>
       <p class="text-lg mb-4">
         Hema, you are my everything. Every moment with you is a treasure, and I'm so grateful for the love we share. 
         This website is a small token of my love for you on our special day. Here's to many more years of laughter, love, and adventure together!
       </p>
-      <div class="text-6xl text-red-500 heart inline-block">❤️</div>
+      <div class="text-6xl text-red-500 heart inline-block hover-scale">❤️</div>
     </section>
 
-    <section class="mt-12">
-      <h2 class="text-3xl font-semibold text-center mb-6 font-serif">Memories We Cherish</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <img src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Memory 1" class="w-full h-48 object-cover rounded-md">
-          <p class="mt-2 text-center">[Our First Date]</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <img src="https://images.unsplash.com/photo-1528223236182-3f6964e5ee10?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Memory 2" class="w-full h-48 object-cover rounded-md">
-          <p class="mt-2 text-center">[Our Wedding Day]</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Memory 3" class="w-full h-48 object-cover rounded-md">
-          <p class="mt-2 text-center">[A Recent Adventure]</p>
-        </div>
-      </div>
+    <section class="mt-12 text-center fade-in fade-in-delay-3">
+      <h2 class="text-3xl font-semibold mb-6 font-serif">🌺 A Special Memory 🌺</h2>
+      <p class="text-lg mb-4">
+        I've put together a collection of special moments for you to enjoy. Click below to see our memories!
+      </p>
+      <!-- Replace href with your Google Photos share link (e.g., https://photos.app.goo.gl/...) -->
+      <a href="https://photos.app.goo.gl/QS7qmpUaj9FTMKiR6" target="_blank" class="inline-block bg-rose-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-rose-700 hover-scale transition-all duration-300">
+        🌹 View on Google Photos 🌹
+      </a>
     </section>
   </main>
 
-  <footer class="bg-rose-600 text-white text-center py-6">
-    <p>Forever Yours, Sreevaru</p>
+  <footer class="bg-rose-600 text-white text-center py-6 fade-in fade-in-delay-1">
+    <p>🌼 Forever Yours, Sreevaru 🌼</p>
   </footer>
 </body>
 </html>
